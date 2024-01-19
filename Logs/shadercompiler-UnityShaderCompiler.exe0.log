@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 Base path: 'E:/unity/installs/2021.3.19f1/Editor/Data', plugins path 'E:/unity/installs/2021.3.19f1/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 
 Cmd: shutdown
-=======
-Base path: 'E:/unity/installs/2021.3.19f1/Editor/Data', plugins path 'E:/unity/installs/2021.3.19f1/Editor/Data/PlaybackEngines'
-Cmd: initializeCompiler
-
-Cmd: shutdown
->>>>>>> 0cc5975fc469f8d25740aa00d17b5213b2cda509
