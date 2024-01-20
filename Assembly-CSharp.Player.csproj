@@ -56,12 +56,17 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\scripts\Player\Assassin.cs" />
     <Compile Include="Assets\scripts\Player\Movement.cs" />
     <Compile Include="Assets\scripts\Player\CheckGround.cs" />
     <Compile Include="Assets\scripts\Player\CameraLerp.cs" />
     <Compile Include="Assets\scripts\Player\jumping.cs" />
+    <Compile Include="Assets\scripts\Anim\AnimGif.cs" />
     <Compile Include="Assets\scripts\Player\Wave.cs" />
-    <Compile Include="Assets\scripts\Player\Assassin.cs" />
+    <Compile Include="Assets\scripts\Player\Archer.cs" />
+    <Compile Include="Assets\scripts\Enemy\Enemy.cs" />
+    <Compile Include="Assets\scripts\Enemy\EnemyZone.cs" />
+    <Compile Include="Assets\scripts\Player\Health.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -693,6 +698,9 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.AI.Navigation">
+      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

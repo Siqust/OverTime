@@ -5,12 +5,12 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     private Rigidbody2D rb;
-    public float speed = 0.5f;
-    public float airres;
+    public float speed = 800f;
+    public float airres = 1.5f;
     public bool dynamic_jump;
-    public float jump_force;
+    public float jump_force=9f;
     public CheckGround checkGround;
-    public float coef;
+    public float coef= 1.8f;
     private float delay;
     private Animator animator;
     public GameObject katana;
@@ -81,6 +81,9 @@ public class Movement : MonoBehaviour
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
         //transform.position += new Vector3(xmove * speed * Time.deltaTime, 0f,0f);
+
+        
+
 
         delay -= Time.deltaTime;
         if (checkGround.grounded && Input.GetKey("space") && delay<=0)

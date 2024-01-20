@@ -6,6 +6,7 @@ public class Wave : MonoBehaviour
 {
     public float speed=5f;
     public float delete_time=3f;
+    public float damage;
     void Start()
     {
         Invoke("Destr", delete_time);
