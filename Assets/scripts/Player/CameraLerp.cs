@@ -34,16 +34,15 @@ public class CameraLerp : MonoBehaviour
                 clampy[1] = e.transform.position.y;
             }
         }
-        clampx[0] += xoffset/2;
-        clampx[1] -= xoffset/2;
-        clampy[0] += yoffset/2;
-        clampy[1] -= yoffset/2;
     }
     void Update()
     {
-        
-        var x = Mathf.Clamp(player.position.x,clampx[0],clampx[1]);
-        var y = Mathf.Clamp(player.position.y, clampy[0], clampy[1]);
+        var minx = clampx[0]+xoffset/2;
+        var maxx = clampx[1]-xoffset/2;
+        var miny = clampy[0]+yoffset/2;
+        var maxy = clampy[1]-yoffset/2;
+        var x = Mathf.Clamp(player.position.x,minx,maxx);
+        var y = Mathf.Clamp(player.position.y, miny, maxy);
         transform.position = Vector3.Lerp(transform.position, new Vector3(x, y, -10), speed);
 
     }

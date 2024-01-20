@@ -35,32 +35,14 @@
     <ImplicitlyExpandNETStandardFacades>false</ImplicitlyExpandNETStandardFacades>
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
-<<<<<<< HEAD
-  <PropertyGroup>
-    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <UnityProjectGenerator>Package</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>2.0.17</UnityProjectGeneratorVersion>
-    <UnityProjectType>Game:1</UnityProjectType>
-    <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
-    <UnityVersion>2021.3.19f1</UnityVersion>
-  </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Assets\scripts\Player\Movement.cs" />
-    <Compile Include="Assets\scripts\Player\CheckGround.cs" />
-    <Compile Include="Assets\scripts\Player\CameraLerp.cs" />
-    <Compile Include="Assets\scripts\Player\jumping.cs" />
-    <Compile Include="Assets\scripts\Player\Wave.cs" />
-    <Compile Include="Assets\scripts\Player\Assassin.cs" />
-  </ItemGroup>
-=======
->>>>>>> 29a8b6956f1568c0156b8bdd50cd8be933b116cd
-  <ItemGroup>
+     <Compile Include="Assets\scripts\Player\Assassin.cs" />
      <Compile Include="Assets\scripts\Player\Movement.cs" />
      <Compile Include="Assets\scripts\Player\CheckGround.cs" />
      <Compile Include="Assets\scripts\Player\CameraLerp.cs" />
+     <Compile Include="Assets\scripts\Player\jumping.cs" />
+     <Compile Include="Assets\scripts\Player\Wave.cs" />
+     <Compile Include="Assets\scripts\Anim\AnimGIF.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.19f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -308,22 +290,22 @@
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.19f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Unsafe">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.Unsafe.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Mdb">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Pdb">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Rocks">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.19f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
@@ -692,127 +674,127 @@
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.19f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow.Editor">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Extras">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Editor">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InternalAPIEngineBridge.001">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.PixelPerfect">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="PsdPlugin">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core.Editor">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.State.Editor">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Editor">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.IK.Editor">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Path.Editor">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Psdimporter.Editor">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InternalAPIEditorBridge.001">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Extras.Editor">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.IK.Runtime">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Shared.Editor">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Runtime">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.PixelPerfect.Editor">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics.Editor">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Common.Runtime">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Editor">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Common.Editor">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Runtime">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.State">
-        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTIme\OverTime\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+        <HintPath>C:\Users\SystemX\Documents\A_PROJECTS\Unity\OverTime\OverTime\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
