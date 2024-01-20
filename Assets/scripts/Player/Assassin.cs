@@ -107,13 +107,13 @@ public class Assassin : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(0) && delay_attack <= 0)
         {
-            delay_attack = 1f;
+            delay_attack = 0.5f;
+            animator.SetTrigger("Attack");
             foreach (var enemy in atkzone.enemies)
             {
                 enemy.GetComponent<Enemy>().health -= 1f;
                 enemy.GetComponent<Animator>().SetTrigger("Hit");
             }
-            animator.SetTrigger("Attack");
         }
 
         if (Input.GetKeyDown("r") && wave_ready)
