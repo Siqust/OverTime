@@ -69,6 +69,17 @@
     <Compile Include="Assets\scripts\Player\Health.cs" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
+=======
+     <Compile Include="Assets\scripts\Player\Assassin.cs" />
+     <Compile Include="Assets\scripts\Player\Movement.cs" />
+     <Compile Include="Assets\scripts\Player\CheckGround.cs" />
+     <Compile Include="Assets\scripts\Player\CameraLerp.cs" />
+     <Compile Include="Assets\scripts\Player\jumping.cs" />
+     <Compile Include="Assets\scripts\Anim\AnimGif.cs" />
+     <Compile Include="Assets\scripts\Player\Wave.cs" />
+     <Compile Include="Assets\scripts\SceneChanger.cs" />
+>>>>>>> ba1d14e9b28c95b63278cd18245fc5b055408cea
     <Reference Include="UnityEngine">
       <HintPath>E:\unity\installs\2021.3.19f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

@@ -15,9 +15,15 @@ E:/unity-games/OverTime
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
+<<<<<<< HEAD
 49846
 Successfully changed project path to: E:/unity-games/OverTime
 E:/unity-games/OverTime
+=======
+56975
+Successfully changed project path to: C:/Users/SystemX/Documents/A_PROJECTS/Unity/OverTime/OverTime
+C:/Users/SystemX/Documents/A_PROJECTS/Unity/OverTime/OverTime
+>>>>>>> ba1d14e9b28c95b63278cd18245fc5b055408cea
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,11 +53,19 @@ E:/unity-games/OverTime
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
+<<<<<<< HEAD
 Player connection [8416] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 933776287 [EditorId] 933776287 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-AJFN0QR) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
 Player connection [8416] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 933776287 [EditorId] 933776287 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-AJFN0QR) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 Refreshing native plugins compatible for Editor in 144.10 ms, found 4 plugins.
+=======
+Player connection [16844] Host "[IP] 192.168.133.221 [Port] 0 [Flags] 2 [Guid] 766056419 [EditorId] 766056419 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-EJHCHU7) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [16844] Host "[IP] 192.168.133.221 [Port] 0 [Flags] 2 [Guid] 766056419 [EditorId] 766056419 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-EJHCHU7) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 71.53 ms, found 4 plugins.
+>>>>>>> ba1d14e9b28c95b63278cd18245fc5b055408cea
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.19f1 (c9714fde33b6)
 [Subsystems] Discovering subsystems at path E:/unity/installs/2021.3.19f1/Editor/Data/Resources/UnitySubsystems
@@ -64,6 +78,7 @@ Direct3D:
     VRAM:     1004 MB
     Driver:   15.201.1301.0
 Initialize mono
+<<<<<<< HEAD
 Mono path[0] = 'E:/unity/installs/2021.3.19f1/Editor/Data/Managed'
 Mono path[1] = 'E:/unity/installs/2021.3.19f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'E:/unity/installs/2021.3.19f1/Editor/Data/MonoBleedingEdge/etc'
@@ -80,36 +95,73 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (1409ms)
 		BeginReloadAssembly (130ms)
+=======
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56128
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002592 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 73.92 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.503 seconds
+Domain Reload Profiling:
+	ReloadAssembly (504ms)
+		BeginReloadAssembly (53ms)
+>>>>>>> ba1d14e9b28c95b63278cd18245fc5b055408cea
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
+<<<<<<< HEAD
 		EndReloadAssembly (1066ms)
 			LoadAssemblies (129ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
 			SetupTypeCache (222ms)
+=======
+		EndReloadAssembly (367ms)
+			LoadAssemblies (52ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (80ms)
+>>>>>>> ba1d14e9b28c95b63278cd18245fc5b055408cea
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (58ms)
 			SetupLoadedEditorAssemblies (667ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (12ms)
 				SetLoadedEditorAssemblies (0ms)
+<<<<<<< HEAD
 				RefreshPlugins (224ms)
 				BeforeProcessingInitializeOnLoad (3ms)
 				ProcessInitializeOnLoadAttributes (307ms)
 				ProcessInitializeOnLoadMethodAttributes (121ms)
+=======
+				RefreshPlugins (74ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (105ms)
+				ProcessInitializeOnLoadMethodAttributes (39ms)
+>>>>>>> ba1d14e9b28c95b63278cd18245fc5b055408cea
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
+<<<<<<< HEAD
 Registered in 0.016714 seconds.
+=======
+Registered in 0.002732 seconds.
+>>>>>>> ba1d14e9b28c95b63278cd18245fc5b055408cea
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image E:\unity-games\OverTime\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image E:\unity-games\OverTime\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
+<<<<<<< HEAD
 Refreshing native plugins compatible for Editor in 157.04 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
@@ -117,10 +169,20 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (2223ms)
 		BeginReloadAssembly (189ms)
+=======
+Refreshing native plugins compatible for Editor in 75.82 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.935 seconds
+Domain Reload Profiling:
+	ReloadAssembly (936ms)
+		BeginReloadAssembly (99ms)
+>>>>>>> ba1d14e9b28c95b63278cd18245fc5b055408cea
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (10ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
+<<<<<<< HEAD
 			CreateAndSetChildDomain (30ms)
 		EndReloadAssembly (1808ms)
 			LoadAssemblies (168ms)
@@ -137,12 +199,31 @@ Domain Reload Profiling:
 				ProcessInitializeOnLoadAttributes (418ms)
 				ProcessInitializeOnLoadMethodAttributes (62ms)
 				AfterProcessingInitializeOnLoad (8ms)
+=======
+			CreateAndSetChildDomain (22ms)
+		EndReloadAssembly (736ms)
+			LoadAssemblies (67ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (197ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (53ms)
+			SetupLoadedEditorAssemblies (379ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (76ms)
+				BeforeProcessingInitializeOnLoad (76ms)
+				ProcessInitializeOnLoadAttributes (189ms)
+				ProcessInitializeOnLoadMethodAttributes (32ms)
+				AfterProcessingInitializeOnLoad (2ms)
+>>>>>>> ba1d14e9b28c95b63278cd18245fc5b055408cea
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (19ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
+<<<<<<< HEAD
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
 Refreshing native plugins compatible for Editor in 0.97 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
@@ -150,6 +231,15 @@ Unloading 3742 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 41 unused Assets / (229.0 KB). Loaded Objects now: 4197.
 Memory consumption went from 143.3 MB to 143.1 MB.
 Total: 7.123200 ms (FindLiveObjects: 0.424400 ms CreateObjectMapping: 0.235100 ms MarkObjects: 6.090800 ms  DeleteObjects: 0.370700 ms)
+=======
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.97 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3742 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 41 unused Assets / (229.0 KB). Loaded Objects now: 4199.
+Memory consumption went from 143.5 MB to 143.2 MB.
+Total: 2.925300 ms (FindLiveObjects: 0.265500 ms CreateObjectMapping: 0.110700 ms MarkObjects: 2.403800 ms  DeleteObjects: 0.144200 ms)
+>>>>>>> ba1d14e9b28c95b63278cd18245fc5b055408cea
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -163,6 +253,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
+<<<<<<< HEAD
   Time since last request: 269074.241369 seconds.
   path: Assets/scripts/Player/Movement1.cs
   artifactKey: Guid(3b1548f7ae93a504aa131629dc0eaa47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
@@ -4055,3 +4146,9 @@ Received Import Request.
   path: Assets/Enemy.physicsMaterial2D
   artifactKey: Guid(f4ce1155dc8035d4f80b3e560d02f1f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Enemy.physicsMaterial2D using Guid(f4ce1155dc8035d4f80b3e560d02f1f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84cf12604e91b5e4c9a59832542fd60b') in 0.006637 seconds 
+=======
+  Time since last request: 34649.727041 seconds.
+  path: Assets/UI/wind_hashashin.png
+  artifactKey: Guid(90b965631209ebd40b51fc79eda3b8d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/wind_hashashin.png using Guid(90b965631209ebd40b51fc79eda3b8d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c09c8bbc501acbdd502ed86f7cf16b4') in 0.094413 seconds 
+>>>>>>> ba1d14e9b28c95b63278cd18245fc5b055408cea

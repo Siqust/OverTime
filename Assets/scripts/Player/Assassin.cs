@@ -13,12 +13,10 @@ public class Assassin : MonoBehaviour
     public float coef;
     private float delay;
     private Animator animator;
-    public GameObject katana;
-    private Animator katana_animator;
     private int side;
     [Header("Dash settings")]
     public float dash_delay;
-    public float dash_force = 5f;
+    public float dash_force = 0f;
     public bool dash_ready;
     [Header("Wave settings")]
     public GameObject wave;
@@ -32,10 +30,9 @@ public class Assassin : MonoBehaviour
         wave_ready = true;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        katana_animator = katana.GetComponent<Animator>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         var xmove = Input.GetAxis("Horizontal");
         if (rb.velocity.y > 1)
@@ -75,22 +72,18 @@ public class Assassin : MonoBehaviour
         {
             xmove /= airres;
         }
-        if (Input.GetMouseButtonDown(0) && katana_animator.GetCurrentAnimatorClipInfo(0)[0].clip.name=="idle")
-        {
-            katana_animator.SetTrigger("Hit");
-        }
 
-        if (Input.GetKeyDown("r") && wave_ready && katana_animator.GetCurrentAnimatorClipInfo(0)[0].clip.name == "idle")
+        if (Input.GetKeyDown("r") && wave_ready)
         {
             var g = Instantiate(wave);
             g.transform.position = wavespawn.transform.position;
             g.transform.rotation = wavespawn.transform.rotation;
-            katana_animator.SetTrigger("Hit");
+            //katana_animator.SetTrigger("Hit");
             Invoke("ReloadWave", wave_reload);
         }
 
-        if (!(Mathf.Abs(xmove * speed * Time.deltaTime) < Mathf.Abs(rb.velocity.x) && ((xmove * speed * Time.deltaTime>=0 && rb.velocity.x>=0) || (xmove * speed * Time.deltaTime <= 0 && rb.velocity.x <= 0))))
-            rb.velocity = new Vector2(xmove * speed * Time.deltaTime, rb.velocity.y);
+        if (!(Mathf.Abs(xmove * speed) < Mathf.Abs(rb.velocity.x) && ((xmove * speed>=0 && rb.velocity.x>=0) || (xmove * speed  <= 0 && rb.velocity.x <= 0))))
+            rb.velocity = new Vector2(xmove * speed, rb.velocity.y);
         if (!Input.anyKey)
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
