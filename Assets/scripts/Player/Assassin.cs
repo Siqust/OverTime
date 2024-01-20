@@ -14,6 +14,9 @@ public class Assassin : MonoBehaviour
     private float delay;
     private Animator animator;
     private int side;
+    [Header("Hit settings")]
+    public float delay_attack;
+    public AttackZone atkzone;
     [Header("Dash settings")]
     public float dash_delay;
     public float dash_force = 0f;
@@ -73,25 +76,24 @@ public class Assassin : MonoBehaviour
             xmove /= airres;
         }
 
-        if (Input.GetKeyDown("r") && wave_ready)
-        {
-            var g = Instantiate(wave);
-            g.transform.position = wavespawn.transform.position;
-            g.transform.rotation = wavespawn.transform.rotation;
-            //katana_animator.SetTrigger("Hit");
-            Invoke("ReloadWave", wave_reload);
-        }
+        delay_attack -= Time.deltaTime;
 
         if (!(Mathf.Abs(xmove * speed) < Mathf.Abs(rb.velocity.x) && ((xmove * speed>=0 && rb.velocity.x>=0) || (xmove * speed  <= 0 && rb.velocity.x <= 0))))
             rb.velocity = new Vector2(xmove * speed, rb.velocity.y);
-        if (!Input.anyKey)
-        {
-            rb.velocity = new Vector2(0, rb.velocity.y);
-        }
-        //transform.position += new Vector3(xmove * speed * Time.deltaTime, 0f,0f);
 
+    }
+    void ReloadDash()
+    {
+        dash_ready = true;
+    }
+    void ReloadWave()
+    {
+        wave_ready = true;
+    }
+    private void Update()
+    {
         delay -= Time.deltaTime;
-        if (checkGround.grounded && Input.GetKey("space") && delay<=0)
+        if (checkGround.grounded && Input.GetKey("space") && delay <= 0)
         {
             delay = 0.5f;
             rb.velocity = new Vector2(rb.velocity.x, jump_force);
@@ -103,13 +105,24 @@ public class Assassin : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y / coef);
             }
         }
-    }
-    void ReloadDash()
-    {
-        dash_ready = true;
-    }
-    void ReloadWave()
-    {
-        wave_ready = true;
+        if (Input.GetMouseButtonDown(0) && delay_attack <= 0)
+        {
+            delay_attack = 1f;
+            foreach (var enemy in atkzone.enemies)
+            {
+                enemy.GetComponent<Enemy>().health -= 1f;
+                enemy.GetComponent<Animator>().SetTrigger("Hit");
+            }
+            //¿Õ»Ã¿÷»ﬂ ¿“¿ »
+        }
+
+        if (Input.GetKeyDown("r") && wave_ready)
+        {
+            var g = Instantiate(wave);
+            g.transform.position = wavespawn.transform.position;
+            g.transform.rotation = wavespawn.transform.rotation;
+            //katana_animator.SetTrigger("Hit");
+            Invoke("ReloadWave", wave_reload);
+        }
     }
 }

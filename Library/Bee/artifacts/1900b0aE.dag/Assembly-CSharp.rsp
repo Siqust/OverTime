@@ -374,6 +374,7 @@
 "Assets/scripts/Enemy/EnemyZone.cs"
 "Assets/scripts/Player/Archer.cs"
 "Assets/scripts/Player/Assassin.cs"
+"Assets/scripts/Player/AttackZone.cs"
 "Assets/scripts/Player/CameraLerp.cs"
 "Assets/scripts/Player/CheckGround.cs"
 "Assets/scripts/Player/Health.cs"

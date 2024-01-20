@@ -113,7 +113,7 @@ Transform:
   m_GameObject: {fileID: 5254257625361239439}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -4.07, y: 0.01, z: -0}
-  m_LocalScale: {x: 0.7, y: 0.5, z: 0.7}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8726961919407333888}
@@ -4895,6 +4895,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   delete_time: 3
+  damage: 0
 --- !u!199 &3743349870376567635
 ParticleSystemRenderer:
   serializedVersion: 6
