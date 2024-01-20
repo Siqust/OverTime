@@ -41,8 +41,8 @@
      <Compile Include="Assets\scripts\Player\CheckGround.cs" />
      <Compile Include="Assets\scripts\Player\CameraLerp.cs" />
      <Compile Include="Assets\scripts\Player\jumping.cs" />
+     <Compile Include="Assets\scripts\Anim\AnimGif.cs" />
      <Compile Include="Assets\scripts\Player\Wave.cs" />
-     <Compile Include="Assets\scripts\Anim\AnimGIF.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.19f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
