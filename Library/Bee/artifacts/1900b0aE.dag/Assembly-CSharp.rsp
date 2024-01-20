@@ -367,9 +367,12 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/scripts/Player/Assassin.cs"
 "Assets/scripts/Player/CameraLerp.cs"
 "Assets/scripts/Player/CheckGround.cs"
+"Assets/scripts/Player/jumping.cs"
 "Assets/scripts/Player/Movement.cs"
+"Assets/scripts/Player/Wave.cs"
 -langversion:9.0
 
 /deterministic

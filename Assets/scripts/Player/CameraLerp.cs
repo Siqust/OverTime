@@ -7,8 +7,8 @@ public class CameraLerp : MonoBehaviour
     public float speed;
     public Transform player;
     public Transform[] edges;
-    private List<float> clampx;
-    private List<float> clampy;
+    public List<float> clampx;
+    public List<float> clampy;
     public float xoffset;
     public float yoffset;
     private void Start()
@@ -17,19 +17,19 @@ public class CameraLerp : MonoBehaviour
         clampy = new List<float>() { 0f, 0f };
         foreach (var e in edges)
         {
-            if (e.transform.position.x > clampx[0])
+            if (e.transform.position.x < clampx[0])
             {
                 clampx[0] = e.transform.position.x;
             }
-            if (e.transform.position.x < clampx[1])
+            if (e.transform.position.x > clampx[1])
             {
                 clampx[1] = e.transform.position.x;
             }
-            if (e.transform.position.y > clampy[0])
+            if (e.transform.position.y < clampy[0])
             {
                 clampy[0] = e.transform.position.y;
             }
-            if (e.transform.position.y < clampy[1])
+            if (e.transform.position.y > clampy[1])
             {
                 clampy[1] = e.transform.position.y;
             }
@@ -43,7 +43,7 @@ public class CameraLerp : MonoBehaviour
     {
         
         var x = Mathf.Clamp(player.position.x,clampx[0],clampx[1]);
-        var y = Mathf.Clamp(player.position.x, clampy[0], clampy[1]);
+        var y = Mathf.Clamp(player.position.y, clampy[0], clampy[1]);
         transform.position = Vector3.Lerp(transform.position, new Vector3(x, y, -10), speed);
 
     }
