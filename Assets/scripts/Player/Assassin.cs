@@ -113,7 +113,7 @@ public class Assassin : MonoBehaviour
                 enemy.GetComponent<Enemy>().health -= 1f;
                 enemy.GetComponent<Animator>().SetTrigger("Hit");
             }
-            //¿Õ»Ã¿÷»ﬂ ¿“¿ »
+            animator.SetTrigger("Attack");
         }
 
         if (Input.GetKeyDown("r") && wave_ready)
