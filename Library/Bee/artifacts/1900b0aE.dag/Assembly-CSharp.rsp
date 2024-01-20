@@ -374,6 +374,7 @@
 "Assets/scripts/Player/jumping.cs"
 "Assets/scripts/Player/Movement.cs"
 "Assets/scripts/Player/Wave.cs"
+"Assets/scripts/SceneChanger.cs"
 -langversion:9.0
 
 /deterministic
