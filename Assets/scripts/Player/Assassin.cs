@@ -14,6 +14,7 @@ public class Assassin : MonoBehaviour
     private float delay;
     private Animator animator;
     private int side;
+    public bool canMove;
     [Header("attack settings")]
     private float attack_timer;
     public float attack_delay;
@@ -26,19 +27,26 @@ public class Assassin : MonoBehaviour
     public GameObject wave;
     public bool wave_ready;
     public float wave_reload;
+    public float wave_delay;
     public Transform wavespawn;
 
     void Awake()
     {
+        side = 1;
         dash_ready = true;
         wave_ready = true;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        canMove = true;
     }
 
     void FixedUpdate()
     {
         var xmove = Input.GetAxis("Horizontal");
+        if (!canMove)
+        {
+            xmove = 0f;
+        }
         if (rb.velocity.y > 0.01)
         {
             animator.SetInteger("State", 2);
@@ -78,14 +86,6 @@ public class Assassin : MonoBehaviour
             rb.velocity = new Vector2(xmove * speed, rb.velocity.y);
 
     }
-    void ReloadDash()
-    {
-        dash_ready = true;
-    }
-    void ReloadWave()
-    {
-        wave_ready = true;
-    }
     private void Update()
     {
         if (dash_ready && Input.GetKeyDown(KeyCode.LeftShift))
@@ -107,7 +107,7 @@ public class Assassin : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y / coef);
             }
         }
-        if (Input.GetMouseButtonDown(0) && attack_timer <= 0)
+        if (Input.GetMouseButtonDown(0) && attack_timer <= 0 && animator.GetCurrentAnimatorClipInfo(0)[0].clip.name != "wave")
         {
             attack_timer = attack_delay;
             animator.SetTrigger("Attack");
@@ -118,13 +118,28 @@ public class Assassin : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown("r") && wave_ready)
+        if (Input.GetKeyDown("r") && wave_ready && animator.GetCurrentAnimatorClipInfo(0)[0].clip.name!="attack")
         {
-            var g = Instantiate(wave);
-            g.transform.position = wavespawn.transform.position;
-            g.transform.rotation = wavespawn.transform.rotation;
-            //katana_animator.SetTrigger("Hit");
+            Invoke("SpawnWave", wave_delay);
+            animator.SetTrigger("Wave");
+            wave_ready = false;
             Invoke("ReloadWave", wave_reload);
         }
+    }
+    void SpawnWave()
+    {
+        var g = Instantiate(wave);
+        g.transform.position = wavespawn.transform.position;
+        g.transform.rotation=wavespawn.transform.rotation;
+        g.GetComponent<Wave>().speed *= side;
+        g.transform.parent = transform;
+    }
+    void ReloadDash()
+    {
+        dash_ready = true;
+    }
+    void ReloadWave()
+    {
+        wave_ready = true;
     }
 }

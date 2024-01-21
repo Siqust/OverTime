@@ -11,17 +11,17 @@ public class Wave : MonoBehaviour
     {
         Invoke("Destr", delete_time);
     }
-
-    // Update is called once per frame
-    void FixedUpdate() {
-        if (Input.GetKey("r")) 
-        {   
-            animator.SetInteger("Wave", 1);
-        }
-    }
     void Update()
     {
-        transform.position += transform.forward * -speed * Time.deltaTime;
+        transform.position += new Vector3(1f,0f,0f) * speed * Time.deltaTime;
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.transform.tag == "Enemy")
+        {
+            collision.transform.GetComponent<Enemy>().health -= damage;
+            Destroy(gameObject);
+        }
     }
     void Destr()
     {

@@ -665,14 +665,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 74445978}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.203, y: -0.776, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.381, y: -0.776, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1098561073}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &80172037
 GameObject:
   m_ObjectHideFlags: 0
@@ -9138,14 +9138,16 @@ MonoBehaviour:
   jump_force: 7
   checkGround: {fileID: 1059062361}
   coef: 4
+  canMove: 1
   attack_delay: 0.5
   atkzone: {fileID: 43013536}
   dash_delay: 1
-  dash_force: 300
+  dash_force: 1000
   dash_ready: 0
   wave: {fileID: 5254257625361239439, guid: 4fd5eb1bd26a2f64d99ffdd4a3198039, type: 3}
   wave_ready: 0
   wave_reload: 2
+  wave_delay: 0.2
   wavespawn: {fileID: 74445979}
 --- !u!50 &1098561071
 Rigidbody2D:
@@ -9726,6 +9728,7 @@ GameObject:
   - component: {fileID: 1144105277}
   - component: {fileID: 1144105276}
   - component: {fileID: 1144105275}
+  - component: {fileID: 1144105279}
   m_Layer: 0
   m_Name: Main Camera.1
   m_TagString: MainCamera
@@ -9745,7 +9748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf070dabbc0240647b52aca1d993c702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0.1
   player: {fileID: 1098561073}
   edges:
   - {fileID: 551380189}
@@ -9813,7 +9816,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1144105274}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.3049793, y: -0.2425696, z: -1}
+  m_LocalPosition: {x: 7.71, y: 3.97, z: -1}
   m_LocalScale: {x: 0.25828767, y: 0.25828767, z: 0.25828767}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9825,6 +9828,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1144105279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144105274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f6d052b06677ce4aa9591b040541694, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeScale: 1
 --- !u!1 &1150351874
 GameObject:
   m_ObjectHideFlags: 0
@@ -16635,7 +16651,7 @@ MonoBehaviour:
   raycast: {fileID: 1558266951}
   speed: 1
   player: {fileID: 1098561073}
-  health: 1
+  health: 5
   ready_to_attack: 0
 --- !u!212 &1903270699
 SpriteRenderer:
