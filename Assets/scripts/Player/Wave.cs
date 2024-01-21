@@ -13,6 +13,12 @@ public class Wave : MonoBehaviour
     }
 
     // Update is called once per frame
+    void FixedUpdate() {
+        if (Input.GetKey("r")) 
+        {   
+            animator.SetInteger("Wave", 1);
+        }
+    }
     void Update()
     {
         transform.position += transform.forward * -speed * Time.deltaTime;

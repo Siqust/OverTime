@@ -369,7 +369,6 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
-"Assets/scripts/Anim/AnimGif.cs"
 "Assets/scripts/Enemy/Enemy.cs"
 "Assets/scripts/Enemy/EnemyZone.cs"
 "Assets/scripts/Player/Archer.cs"
