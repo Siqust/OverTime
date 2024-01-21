@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
     public float speed;
     public Transform player;
     public float health;
-    private bool ready_to_attack;
+    public bool ready_to_attack;
     private Rigidbody2D rb;
     private void Start()
     {
@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
     {
         if (health <= 0)
         {
-            //ÀÍÈÌÀÖÈß ÑÌÅÐÒÈ
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             Invoke("Death", 2f);
         }
         else
@@ -32,13 +32,16 @@ public class Enemy : MonoBehaviour
             if (Vector3.Distance(transform.position, player.position) < zone.localScale.x && reach.player==null && ready_to_attack)
             {
                 var side = 1f;
-                if (transform.position.x> player.transform.position.x) { side = -1f; }
-                transform.rotation = new Quaternion(180*side, transform.rotation.y,0f,0f);
-                rb.velocity = new Vector2(side * speed,rb.velocity.y);
+                if (transform.position.x < player.transform.position.x) {
+                    transform.eulerAngles = new Vector2(0, 180);
+                    rb.velocity = new Vector2(side * speed,rb.velocity.y);
+                } else {
+                    transform.eulerAngles = new Vector2(0, 0);
+                    rb.velocity = new Vector2(-side * speed,rb.velocity.y);
+                }
+
             }
-            if (reach.player != null && ready_to_attack==true)
-            {
-                //ÀÍÈÌÀÖÈß ÀÒÀÊÈ
+            if (reach.player != null && ready_to_attack==true) {
                 ready_to_attack = false;
                 Invoke("Attack", delay);
             }

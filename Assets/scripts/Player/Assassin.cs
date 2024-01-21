@@ -14,8 +14,9 @@ public class Assassin : MonoBehaviour
     private float delay;
     private Animator animator;
     private int side;
-    [Header("Hit settings")]
-    public float delay_attack;
+    [Header("attack settings")]
+    private float attack_timer;
+    public float attack_delay;
     public AttackZone atkzone;
     [Header("Dash settings")]
     public float dash_delay;
@@ -38,11 +39,11 @@ public class Assassin : MonoBehaviour
     void FixedUpdate()
     {
         var xmove = Input.GetAxis("Horizontal");
-        if (rb.velocity.y > 1)
+        if (rb.velocity.y > 0.01)
         {
             animator.SetInteger("State", 2);
         }
-        else if (rb.velocity.y < -1)
+        else if (rb.velocity.y < -0.01)
         {
             animator.SetInteger("State", 3);
         }
@@ -65,18 +66,13 @@ public class Assassin : MonoBehaviour
             side = 1;
         }
 
-        if (dash_ready && Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            rb.AddForce(new Vector2(dash_force*side, 0));
-            dash_ready = false;
-            Invoke("ReloadDash", dash_delay);
-        }
+
         if (!checkGround.grounded)
         {
             xmove /= airres;
         }
 
-        delay_attack -= Time.deltaTime;
+        attack_timer -= Time.deltaTime;
 
         if (!(Mathf.Abs(xmove * speed) < Mathf.Abs(rb.velocity.x) && ((xmove * speed>=0 && rb.velocity.x>=0) || (xmove * speed  <= 0 && rb.velocity.x <= 0))))
             rb.velocity = new Vector2(xmove * speed, rb.velocity.y);
@@ -92,6 +88,12 @@ public class Assassin : MonoBehaviour
     }
     private void Update()
     {
+        if (dash_ready && Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            rb.AddForce(new Vector2(dash_force*side, 0));
+            dash_ready = false;
+            Invoke("ReloadDash", dash_delay);
+        }
         delay -= Time.deltaTime;
         if (checkGround.grounded && Input.GetKey("space") && delay <= 0)
         {
@@ -105,15 +107,15 @@ public class Assassin : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y / coef);
             }
         }
-        if (Input.GetMouseButtonDown(0) && delay_attack <= 0)
+        if (Input.GetMouseButtonDown(0) && attack_timer <= 0)
         {
-            delay_attack = 1f;
+            attack_timer = attack_delay;
+            animator.SetTrigger("Attack");
             foreach (var enemy in atkzone.enemies)
             {
                 enemy.GetComponent<Enemy>().health -= 1f;
                 enemy.GetComponent<Animator>().SetTrigger("Hit");
             }
-            animator.SetTrigger("Attack");
         }
 
         if (Input.GetKeyDown("r") && wave_ready)
